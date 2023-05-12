@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Produtos</title>
+
+        <script src="js/validations.js"></script>
+        <script src="js/lista.js"></script>
+
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Formulário Dinâmico</h2>
+            <div id="form">
+                <form action="" class="form">
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input 
+                                type="text" 
+                                id="nome" 
+                                class="input-nome" 
+                                required 
+                                pattern="[A-Za-À-ú-z0-9\s]+"
+                            >
+                        </div>
+                        
+                        <div id="input-group">
+                            <div class="form-group">
+                                <label for="preco">Preço</label>
+                                <input 
+                                    type="text" 
+                                    id="preco" 
+                                    class="input-padrao input-pequeno" 
+                                    required 
+                                    placeholder="R$ 0,00"
+                                    step="0.01" 
+                                    oninput="formatarReal(this)" 
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="qtd">Quantidade</label>
+                                <input type="number" id="qtd" class="input-padrao input-pequeno" required min="1">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="submit" value="Cadastrar" class="cadastrar">
+                        </div>
+                    </form>
+                </form>
+                <div id="lista">
+                    <h3>Produtos cadastrados:</h3>
+                    <ol id="lista-produtos"></ol>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
