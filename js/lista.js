@@ -12,7 +12,7 @@ window.onload = () => {
 
         // criar um novo elemento li
         const li = document.createElement('li');
-        li.innerHTML = `${nome} - ${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} - ${qtd} unidades`;
+        li.innerHTML = `${nome} <br> R$:${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} - ${qtd} unidades`;
 
         // adicionar o novo elemento à lista
         const listaProdutos = document.getElementById('lista-produtos');
